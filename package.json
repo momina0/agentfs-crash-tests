@@ -9,6 +9,7 @@
     "wal": "node experiments/02-wal-growth.mjs",
     "crash": "node experiments/03-crash.mjs",
     "cost": "node experiments/04-write-cost.mjs",
+    "summary": "node experiments/summary.mjs",
     "all": "npm run snapshot && npm run wal && npm run crash && npm run cost"
   },
   "engines": { "node": ">=22.5" },
