@@ -1,5 +1,5 @@
 // What does wrapping writeFile in a transaction cost? Writes per second for a few file sizes.
-import { AgentFS } from "agentfs-sdk";
+const { AgentFS } = await import(process.env.AGENTFS_SDK ?? "agentfs-sdk");
 import fs from "node:fs";
 
 const dir = "results/cost";
@@ -30,4 +30,4 @@ for (const [sizeKiB, iterations] of [[1, 500], [64, 200], [256, 50], [1024, 20]]
   });
 }
 console.table(rows);
-fs.writeFileSync("results/04-write-cost.json", JSON.stringify(rows, null, 2));
+fs.writeFileSync(process.env.OUT ?? "results/04-write-cost.json", JSON.stringify(rows, null, 2));

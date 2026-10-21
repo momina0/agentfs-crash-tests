@@ -1,8 +1,10 @@
 // Child process for 03-crash.mjs. Overwrites one 256 KiB file in a loop until it gets killed.
 // Every version is a single repeated byte, so a reader can tell a complete version from a torn one.
 // usage: node 03-crash-worker.mjs <mode: agentfs | agentfs-tx | native> <path>
-import { AgentFS } from "agentfs-sdk";
+// AGENTFS_SDK picks the SDK package to load (default: agentfs-sdk), e.g. a locally patched build.
 import fs from "node:fs";
+
+const { AgentFS } = await import(process.env.AGENTFS_SDK ?? "agentfs-sdk");
 
 const [mode, path] = process.argv.slice(2);
 const SIZE = 256 * 1024;

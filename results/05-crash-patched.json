@@ -1,0 +1,34 @@
+{
+  "agentfs": {
+    "trials": 40,
+    "fileState": {
+      "intact": 40
+    },
+    "statSizeMatchesData": {
+      "true": 40
+    },
+    "sqliteIntegrity": {
+      "ok": 40
+    },
+    "pendingToolCallsLeftBehind": {
+      "0": 1,
+      "1": 39
+    }
+  },
+  "agentfs-tx": {
+    "trials": 40,
+    "fileState": {
+      "intact": 40
+    },
+    "statSizeMatchesData": {
+      "true": 40
+    },
+    "sqliteIntegrity": {
+      "ok": 40
+    },
+    "pendingToolCallsLeftBehind": {
+      "0": 2,
+      "1": 38
+    }
+  }
+}

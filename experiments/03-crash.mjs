@@ -5,6 +5,8 @@ import { spawn } from "node:child_process";
 import fs from "node:fs";
 
 const TRIALS = Number(process.env.TRIALS ?? 40);
+const MODES = (process.env.MODES ?? "agentfs,agentfs-tx,native").split(",");
+const OUT = process.env.OUT ?? "results/03-crash.json";
 const SIZE = 256 * 1024;
 const dir = "results/crash";
 fs.rmSync(dir, { recursive: true, force: true });
@@ -44,7 +46,7 @@ async function runTrial(mode, i) {
 }
 
 const summary = {};
-for (const mode of ["agentfs", "agentfs-tx", "native"]) {
+for (const mode of MODES) {
   const trials = [];
   for (let i = 0; i < TRIALS; i++) trials.push(await runTrial(mode, i));
   const count = (f) => trials.reduce((acc, t) => ((acc[f(t)] = (acc[f(t)] ?? 0) + 1), acc), {});
@@ -59,4 +61,4 @@ for (const mode of ["agentfs", "agentfs-tx", "native"]) {
   };
   console.log(mode, JSON.stringify(summary[mode]));
 }
-fs.writeFileSync("results/03-crash.json", JSON.stringify(summary, null, 2));
+fs.writeFileSync(OUT, JSON.stringify(summary, null, 2));
