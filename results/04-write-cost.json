@@ -1,0 +1,22 @@
+[
+  {
+    "sizeKiB": 1,
+    "writes/s (autocommit)": 248,
+    "writes/s (transaction)": 450
+  },
+  {
+    "sizeKiB": 64,
+    "writes/s (autocommit)": 34,
+    "writes/s (transaction)": 74
+  },
+  {
+    "sizeKiB": 256,
+    "writes/s (autocommit)": 10,
+    "writes/s (transaction)": 25
+  },
+  {
+    "sizeKiB": 1024,
+    "writes/s (autocommit)": 2,
+    "writes/s (transaction)": 7
+  }
+]

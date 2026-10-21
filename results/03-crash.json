@@ -1,0 +1,43 @@
+{
+  "agentfs": {
+    "trials": 40,
+    "fileState": {
+      "torn (wrong length)": 39,
+      "intact": 1
+    },
+    "statSizeMatchesData": {
+      "false": 39,
+      "true": 1
+    },
+    "sqliteIntegrity": {
+      "ok": 40
+    },
+    "pendingToolCallsLeftBehind": {
+      "0": 1,
+      "1": 39
+    }
+  },
+  "agentfs-tx": {
+    "trials": 40,
+    "fileState": {
+      "intact": 40
+    },
+    "statSizeMatchesData": {
+      "true": 40
+    },
+    "sqliteIntegrity": {
+      "ok": 40
+    },
+    "pendingToolCallsLeftBehind": {
+      "0": 1,
+      "1": 39
+    }
+  },
+  "native": {
+    "trials": 40,
+    "fileState": {
+      "intact": 23,
+      "empty": 17
+    }
+  }
+}

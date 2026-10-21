@@ -1,0 +1,19 @@
+{
+  "name": "agentfs-crash-tests",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Testing Turso AgentFS (TypeScript SDK) under snapshots, hard kills and write load.",
+  "type": "module",
+  "scripts": {
+    "snapshot": "node experiments/01-snapshot.mjs",
+    "wal": "node experiments/02-wal-growth.mjs",
+    "crash": "node experiments/03-crash.mjs",
+    "cost": "node experiments/04-write-cost.mjs",
+    "all": "npm run snapshot && npm run wal && npm run crash && npm run cost"
+  },
+  "engines": { "node": ">=22.5" },
+  "license": "MIT",
+  "dependencies": {
+    "agentfs-sdk": "0.6.4"
+  }
+}

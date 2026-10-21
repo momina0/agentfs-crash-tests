@@ -1,0 +1,43 @@
+[
+  {
+    "filesWritten": 10,
+    "dbKiB": 4,
+    "walKiB": 600,
+    "filesInDbOnlyCopy": 0
+  },
+  {
+    "filesWritten": 100,
+    "dbKiB": 184,
+    "walKiB": 4027,
+    "filesInDbOnlyCopy": 88
+  },
+  {
+    "filesWritten": 500,
+    "dbKiB": 712,
+    "walKiB": 4027,
+    "filesInDbOnlyCopy": 437
+  },
+  {
+    "filesWritten": 1000,
+    "dbKiB": 1452,
+    "walKiB": 4044,
+    "filesInDbOnlyCopy": 948
+  },
+  {
+    "filesWritten": 2000,
+    "dbKiB": 2904,
+    "walKiB": 4044,
+    "filesInDbOnlyCopy": 1941
+  },
+  {
+    "filesWritten": 5000,
+    "dbKiB": 7256,
+    "walKiB": 4056,
+    "filesInDbOnlyCopy": 4935
+  },
+  {
+    "filesWritten": "after close()",
+    "dbKiB": 7256,
+    "walKiB": 4056
+  }
+]

@@ -1,0 +1,60 @@
+{
+  "A_sizes_while_open": {
+    "a.db": 4096,
+    "a.db-wal": 1046512
+  },
+  "A_sizes_after_close": {
+    "a-snapshot.db": 4096,
+    "a.db": 4096,
+    "a.db-wal": 1046512
+  },
+  "A_copy_db_only_while_open": {
+    "files": "ERROR ENOENT",
+    "progress": null,
+    "toolCalls": 0
+  },
+  "B_copy_db_only_after_close": {
+    "files": "ERROR ENOENT",
+    "progress": null,
+    "toolCalls": 0
+  },
+  "C_copy_db_and_wal": {
+    "files": 20,
+    "progress": {
+      "step": 20
+    },
+    "toolCalls": 1
+  },
+  "D_checkpoint": [
+    {
+      "busy": 0,
+      "log": 0,
+      "checkpointed": 0
+    }
+  ],
+  "D_copy_db_after_checkpoint": {
+    "files": 20,
+    "progress": {
+      "step": 20
+    },
+    "toolCalls": 1
+  },
+  "E_stock_sqlite": {
+    "dentries": 21
+  },
+  "final_sizes": {
+    "a-snapshot.db": 4096,
+    "a-snapshot.db-wal": 135992,
+    "a.db": 4096,
+    "a.db-wal": 1046512,
+    "b-snapshot.db": 4096,
+    "b-snapshot.db-wal": 135992,
+    "c-snapshot.db": 4096,
+    "c-snapshot.db-wal": 1054752,
+    "d-snapshot.db": 81920,
+    "d-snapshot.db-shm": 32768,
+    "d-snapshot.db-wal": 8272,
+    "d.db": 81920,
+    "d.db-wal": 0
+  }
+}
